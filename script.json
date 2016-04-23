@@ -1,8 +1,8 @@
 {
     "HELLO": "Hey, Welcome to Awdesh-Bot< I'll walk you though Awdesh's Resume",
     "CURRENT": "Senior Software Engineer, Nortek Security & Control",
-    "SKILL": "https://github.com/Awdesh"
-    "EXPERIENCE": ""
+    "SKILL": "https://github.com/Awdesh",
+    "LANGUAGE": "JAVA, C#, JS" 
     "TWITTER": "Let's tweet @ Esther so she knows you're setting a bot up. Here's a tweet that's ready to go: http://bit.ly/estherbot-tweet",
     "EDUCATION": "Master's in Computer Science, Syracuse University, NY",
     "CONNECT ME": "",
