@@ -7,7 +7,7 @@ const scriptRules = require('./script.json');
 
 module.exports = new Script({
     processing: {
-        //prompt: (bot) => bot.say('Beep boop...'),
+        prompt: (bot) => bot.say('Bbye. Thanks for taking time to talk to me today...'),
         receive: () => 'processing'
     },
 
@@ -26,9 +26,9 @@ module.exports = new Script({
             function updateSilent() {
                 switch (upperText) {
                     case "CONNECT ME":
-                        return bot.setProp("silent", true);
-                    case "DISCONNECT":
                         return bot.setProp("silent", false);
+                    case "DISCONNECT":
+                        return bot.setProp("silent", true);
                     default:
                         return Promise.resolve();
                 }
