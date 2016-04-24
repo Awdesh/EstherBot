@@ -7,7 +7,7 @@ const scriptRules = require('./script.json');
 
 module.exports = new Script({
     processing: {
-        prompt: (bot) => bot.say('Bbye. Thanks for taking time to talk to me today...'),
+        // prompt: (bot) => bot.say('Bbye. Thanks for taking time to talk to me today...'),
         receive: () => 'processing'
     },
 
