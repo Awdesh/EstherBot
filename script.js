@@ -29,7 +29,7 @@ module.exports = new Script({
     },
 
     speak: {
-        prompt: (bot) => bot.say('Anytime you can type Education, Blog, Experience, Career, LinkedIn in order to learn about me.')
+        prompt: (bot) => bot.say('Anytime you can type Education, Blog, Experience, Career, LinkedIn in order to learn about me.'),
         receive: (bot, message) => {
 
             let upperText = message.text.trim().toUpperCase();
