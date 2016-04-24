@@ -23,8 +23,8 @@ module.exports = new Script({
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
-                 .then(() => bot.say(`Great! Good to knwo you ${name}`))
-                .then(() => 'finish');  
+                 .then(() => bot.say(`Great! Good to know you ${name}`))
+                .then(() => 'speak');  
         }
     },
 
