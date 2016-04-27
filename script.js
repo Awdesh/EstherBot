@@ -37,7 +37,7 @@ module.exports = new Script({
                     .then(() => bot.say("Joke..."));
                 }
                 else{
-                    .then(() => bot.say("No Joke...."))
+                    .then(() => bot.say("I know I disappointed you. Please talk with me back again, I'll be smarter.. Promise"));
                 }
         }
     },
