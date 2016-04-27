@@ -32,10 +32,10 @@ module.exports = new Script({
         prompt: (bot) => bot.say('Though I can tell you a joke, interested?')
         receive: (bot, message) => {
             const interested = message.text;
-            if(${interested} === "yes")
-                return bot.say("Joke...");
-            else
-                return bot.say("No Joke...");
+            // if(${interested} === "yes")
+            //     return bot.say("Joke...");
+            // else
+            return bot.say("No Joke...");
                 // if(${interested} === "yes"){
                 //     .then(() => bot.say("Joke..."));
                 // }
