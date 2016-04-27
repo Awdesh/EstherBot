@@ -29,7 +29,17 @@ module.exports = new Script({
     },
 
     talkRandom: {
-        prompt: (bot) => bot.say('lalala')
+        prompt: (bot) => bot.say('Though I can tell you a joke, interested?')
+        receive: (bot, message) => {
+            const name = message.text;
+            return bot.setProp('interested', interested)
+                if(${interested} === "yes"){
+                    .then(() => bot.say("Joke..."));
+                }
+                else{
+                    .then(() => bot.say("No Joke...."))
+                }
+        }
     },
 
     speak: {
