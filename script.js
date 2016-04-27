@@ -29,8 +29,10 @@ module.exports = new Script({
     },
 
     talkRandom: {
-        prompt: (bot) => bot.say("I know I disappointed you. Please talk with me back again, I'll be smarter.. Promise")
-        // receive: (bot, message) => {
+        prompt: (bot) => bot.say("I know I disappointed you. Please talk with me back again, I'll be smarter.. Promise"),
+        receive: (bot, message) => {
+                return bot.say("Joke...");
+            }
         //     const interested = message.text;
         //     if(${interested} === "yes")
         //         return bot.say("Joke...");
@@ -72,7 +74,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say("Sorry Awdesh didn't teach me that, but one day...").then(() => 'speak');
+                    return bot.say("Sorry Awdesh didn't teach me that, but one day...").then(() => 'talkRandom');
                 }
 
                 var response = scriptRules[upperText];
