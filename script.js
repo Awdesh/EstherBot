@@ -5,6 +5,8 @@ const Script = require('smooch-bot').Script;
 
 const scriptRules = require('./script.json');
 
+var myArr = ["BYE"]
+
 module.exports = new Script({
     processing: {
         // prompt: (bot) => bot.say('Bbye. Thanks for taking time to talk to me today...'),
@@ -29,22 +31,13 @@ module.exports = new Script({
     },
 
     talkRandom: {
-        prompt: (bot) => bot.say("I know I disappointed you. Please talk with me back again, I'll be smarter.. Promise"),
+        prompt: (bot) => bot.say("I normally don't people go untill they say 'bye'"),
         receive: (bot, message) => {
-                return bot.say("Joke...");
+                let upperText = message.text.trim().toUpperCase();
+                if(upperText === "BYE"){
+                    return bot.say("Great chatting with you. Have a good day ahead. Bye.");
+                }
             }
-        //     const interested = message.text;
-        //     if(${interested} === "yes")
-        //         return bot.say("Joke...");
-        //     else
-        //         return bot.say("No Joke...");
-        //         // if(${interested} === "yes"){
-        //         //     .then(() => bot.say("Joke..."));
-        //         // }
-        //         // else{
-        //         //     .then(() => bot.say("I know I disappointed you. Please talk with me back again, I'll be smarter.. Promise"));
-        //         // }
-        // }
     },
 
     speak: {
