@@ -35,7 +35,7 @@ module.exports = new Script({
             if(${interested} === "yes")
                 return bot.say("Joke...");
             else
-                return bot.say("No Joke...")
+                return bot.say("No Joke...");
                 // if(${interested} === "yes"){
                 //     .then(() => bot.say("Joke..."));
                 // }
