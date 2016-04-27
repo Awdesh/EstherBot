@@ -28,6 +28,10 @@ module.exports = new Script({
         }
     },
 
+    talkRandom: {
+        prompt: (bot) => bot.say('lalala')
+    },
+
     speak: {
         prompt: (bot) => bot.say('Anytime you can type Education, Blog, Career, Skill in order to learn about Awdesh'),
         receive: (bot, message) => {
@@ -55,7 +59,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say("Sorry Awdesh didn't teach me that, but one day...").then(() => 'speak');
+                    return bot.say("Sorry Awdesh didn't teach me that, but one day...").then(() => 'talkRandom');
                 }
 
                 var response = scriptRules[upperText];
