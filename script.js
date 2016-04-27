@@ -72,7 +72,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say("Sorry Awdesh didn't teach me that, but one day...").then(() => 'talkRandom');
+                    return bot.say("Sorry Awdesh didn't teach me that, but one day...").then(() => 'speak');
                 }
 
                 var response = scriptRules[upperText];
