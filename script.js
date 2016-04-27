@@ -29,20 +29,20 @@ module.exports = new Script({
     },
 
     talkRandom: {
-        prompt: (bot) => bot.say('Though I can tell you a joke, interested?'),
-        receive: (bot, message) => {
-            const interested = message.text;
-            if(${interested} === "yes")
-                return bot.say("Joke...");
-            else
-                return bot.say("No Joke...");
-                // if(${interested} === "yes"){
-                //     .then(() => bot.say("Joke..."));
-                // }
-                // else{
-                //     .then(() => bot.say("I know I disappointed you. Please talk with me back again, I'll be smarter.. Promise"));
-                // }
-        }
+        prompt: (bot) => bot.say("I know I disappointed you. Please talk with me back again, I'll be smarter.. Promise")
+        // receive: (bot, message) => {
+        //     const interested = message.text;
+        //     if(${interested} === "yes")
+        //         return bot.say("Joke...");
+        //     else
+        //         return bot.say("No Joke...");
+        //         // if(${interested} === "yes"){
+        //         //     .then(() => bot.say("Joke..."));
+        //         // }
+        //         // else{
+        //         //     .then(() => bot.say("I know I disappointed you. Please talk with me back again, I'll be smarter.. Promise"));
+        //         // }
+        // }
     },
 
     speak: {
