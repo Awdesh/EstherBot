@@ -42,8 +42,10 @@ module.exports = new Script({
         prompt: (bot) => bot.say("If you want to learn more about Awdesh just type 'more'"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
-                if(upperText === "MORE"){
-                    return bot.say("Awdesh recently participated in AngelHack Hackathon Delievered successful project and pitched the idea to inverstors. Amazon recognized the effort and rewarded each team member with Fire-TV. Hurray!!!!"); 
+                if(upperText === 'MORE'){
+                    return bot.say('Awdesh recently participated in AngelHack Hackathon Delievered 
+                        successful project and pitched the idea to inverstors. Amazon recognized the 
+                        effort and rewarded each team member with Fire-TV. Hurray!!!!').then(() => 'talkRandom'); 
                 }
             }
     },
