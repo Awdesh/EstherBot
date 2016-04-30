@@ -1,4 +1,3 @@
-/*
 'use strict';
 
 const assert = require('assert');
@@ -65,4 +64,4 @@ describe('bot', function() {
         });
     });
 });
-*/
+
