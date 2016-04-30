@@ -1,8 +1,8 @@
 {
   "name": "smooch-bot-example",
   "version": "1.0.0",
-  "description": "Smooch Bot Example Apps",
-  "author": "Andrew Lavers <alavers@system42.net> (http://smooch.io/)",
+  "description": "Resume browser using Bot.",
+  "author": "Awdesh Sharma.",
   "scripts": {
     "start": "node heroku"
   },
