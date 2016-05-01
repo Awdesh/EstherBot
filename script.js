@@ -30,7 +30,7 @@ module.exports = new Script({
     },
 
     talkRandom: {
-        prompt: (bot) => bot.say("I normally don't let go anyone untill they say 'bye'"),
+        prompt: (bot) => bot.say("I normally don't let go anyone untill they say 'bye'\n. For more info you can contact Awdesh at 'awdesh@outlook.com' or 3153829915"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === "BYE"){
@@ -50,7 +50,7 @@ module.exports = new Script({
     },
 
     speak: {
-        prompt: (bot) => bot.say('Anytime you can type Education, Blog, Career, Skill in order to learn about Awdesh'),
+        prompt: (bot) => bot.say('Anytime you can type Education, Blog, Career, Skill, Contact in order to learn about Awdesh'),
         receive: (bot, message) => {
 
             let upperText = message.text.trim().toUpperCase();
