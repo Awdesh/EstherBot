@@ -12,6 +12,7 @@ module.exports = new Script({
     },
 
     start: {
+        prompt: (bot) => bot.say('I am getting smarter day be day. Please check back with me again.'),
         receive: (bot) => {
             return bot.say('Hi! I\'m  Botu')
                 .then(() => 'askName');
@@ -75,7 +76,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say("Sorry Awdesh didn't teach me that, but one day...").then(() => 'tellMore');
+                    return bot.say('Sorry Awdesh didn\'t teach me that, but one day...').then(() => 'tellMore');
                 }
 
                 var response = scriptRules[upperText];
