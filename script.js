@@ -31,6 +31,7 @@ module.exports = new Script({
 
     talkRandom: {
         prompt: (bot) => bot.say("I normally don't let go anyone untill they say 'bye'\n. For more info you can contact Awdesh at awdesh@outlook.com or 3153829915"),
+        prompt: (bot) => bot.say("I normally don't let go anyone untill they say 'bye'.\n For more info you can contact Awdesh at 'awdesh@outlook.com' or 3153829915"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === "BYE"){
@@ -65,6 +66,7 @@ module.exports = new Script({
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'MORE'){
                     return bot.say("Awdesh's current interest is creating chat-bots. I am creation of him as one of his side project, he's also investing time in exploring MS Bot Framework to create Chat-Bots.").then(() => 'talkRandom'); 
+                    return bot.say('Awdesh recently participated in AngelHack Hackathon. Successfully developed a smart ToDo App on Alexa and pitched the idea to investors.\n Amazon recognized the effort and rewarded each team member with Fire-TV. Hurray!!!!. You can see source code of it at => https://github.com/Awdesh/AutoAlexa.git').then(() => 'talkRandom'); 
                 }
             }
     },
