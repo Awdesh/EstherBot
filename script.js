@@ -30,7 +30,7 @@ module.exports = new Script({
     },
 
     talkRandom: {
-        prompt: (bot) => bot.say("I normally don't let go anyone untill they say 'bye'\n. For more info you can contact Awdesh at 'awdesh@outlook.com' or 3153829915"),
+        prompt: (bot) => bot.say("I normally don't let go anyone untill they say 'bye'\n. For more info you can contact Awdesh at awdesh@outlook.com or 3153829915"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === "BYE"){
@@ -39,12 +39,32 @@ module.exports = new Script({
             }
     },
 
-    tellMore: {
+    tellHackathon: {
         prompt: (bot) => bot.say("If you want to learn more about Awdesh just type 'more'"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'MORE'){
-                    return bot.say('Awdesh recently participated in AngelHack Hackathon. Successfully developed a smart ToDo App on Alexa and pitched the idea to investors\n. Amazon recognized the effort and rewarded each team member with Fire-TV. Hurray!!!!. You can see source code of it at => https://github.com/Awdesh/AutoAlexa.git').then(() => 'talkRandom'); 
+                    return bot.say('Awdesh recently participated in AngelHack Hackathon. Successfully developed a smart ToDo App on Alexa and pitched the idea to investors\n. Amazon recognized the effort and rewarded each team member with Fire-TV. Hurray!!!!. You can see source code of it at => https://github.com/Awdesh/AutoAlexa.git').then(() => 'tellCurrent'); 
+                }
+            }
+    },
+
+    tellCurrent: {
+        prompt: (bot) => bot.say("keep typing 'more' in order to learn more about Awdesh"),
+        receive: (bot, message) => {
+                let upperText = message.text.trim().toUpperCase();
+                if(upperText === 'MORE'){
+                    return bot.say('In his current position Awdesh is contributing in Python powered code base,\n where He is working majorly on imporving backend performance by refactoring search, device activate calls and batch updating activity.\n Using PyMongo and mongoEngine as an ORM for mongoDB database.').then(() => 'tellCurrentSkill'); 
+                }
+            }
+    },
+
+    tellCurrentSkill: {
+        prompt: (bot) => bot.say("Awdesh is a big fan of learning new technology. Type 'more'"),
+        receive: (bot, message) => {
+                let upperText = message.text.trim().toUpperCase();
+                if(upperText === 'MORE'){
+                    return bot.say("Awdesh's current interest is creating chat-bots. I am creation of him as one of his side project, he's also investing time in exploring MS Bot Framework to create Chat-Bots.").then(() => 'talkRandom'); 
                 }
             }
     },
@@ -76,7 +96,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say('Sorry Awdesh didn\'t teach me that, but one day...').then(() => 'tellMore');
+                    return bot.say('Sorry Awdesh didn\'t teach me that, but one day...').then(() => 'tellHackathon');
                 }
 
                 var response = scriptRules[upperText];
