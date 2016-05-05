@@ -70,7 +70,7 @@ module.exports = new Script({
     },
 
     speak: {
-        prompt: (bot) => bot.say("Anytime you can type Education, Blog, Career, Skill, Contact in order to learn about Awdesh or type 'more'"),
+        prompt: (bot) => bot.say("Anytime you can type Education, Blog, Career, Skill, Contact in order to learn about Awdesh"),
         receive: (bot, message) => {
 
             let upperText = message.text.trim().toUpperCase();
