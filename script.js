@@ -28,7 +28,7 @@ module.exports = new Script({
                 .then(() => 'speak');  
         }
     },
-
+    
     talkRandom: {
         prompt: (bot) => bot.say("I normally don't let go anyone untill they say 'bye'.\n For more info you can contact Awdesh at 'awdesh@outlook.com' or 3153829915"),
         receive: (bot, message) => {
