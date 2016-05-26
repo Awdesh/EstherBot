@@ -40,7 +40,7 @@ module.exports = new Script({
     },
 
     tellHackathon: {
-        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:yes)"),
+        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:message)"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'YES'){
@@ -50,7 +50,7 @@ module.exports = new Script({
     },
 
     tellCurrent: {
-        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:yes)"),
+        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:message)"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'YES'){
@@ -60,7 +60,7 @@ module.exports = new Script({
     },
 
     tellCurrentSkill: {
-        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:yes)"),
+        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:message)"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'YES'){
