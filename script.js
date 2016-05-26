@@ -61,9 +61,6 @@ module.exports = new Script({
 
     tellCurrentSkill: {
         prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:yes)"),
-        if(yes){
-            return bot.say('Yes is clicked');
-        }
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'YES'){
