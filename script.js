@@ -40,30 +40,30 @@ module.exports = new Script({
     },
 
     tellHackathon: {
-        prompt: (bot) => bot.say("If you want to learn more about Awdesh just type %[Yes](postback:yes)"),
+        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:yes)"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
-                if(upperText === 'MORE'){
+                if(upperText === 'YES'){
                     return bot.say('Awdesh recently participated in AngelHack Hackathon. Successfully developed a smart ToDo App on Alexa and pitched the idea to investors\n. Amazon recognized the effort and rewarded each team member with Fire-TV. Hurray!!!!. You can see source code of it at => https://github.com/Awdesh/AutoAlexa.git').then(() => 'tellCurrent'); 
                 }
             }
     },
 
     tellCurrent: {
-        prompt: (bot) => bot.say("keep typing 'more' in order to learn more about Awdesh"),
+        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:yes)"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
-                if(upperText === 'MORE'){
+                if(upperText === 'YES'){
                     return bot.say('In his current position Awdesh is contributing in Python powered code base,\n where He is working majorly on imporving backend performance by refactoring search, device activate calls and batch updating activity.\n Using PyMongo and mongoEngine as an ORM for mongoDB database.').then(() => 'tellCurrentSkill'); 
                 }
             }
     },
 
     tellCurrentSkill: {
-        prompt: (bot) => bot.say("Awdesh is a big fan of learning new technology. Type 'more'"),
+        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:yes)"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
-                if(upperText === 'MORE'){
+                if(upperText === 'YES'){
                     return bot.say('Awdesh recently participated in AngelHack Hackathon. Successfully developed a smart ToDo App on Alexa and pitched the idea to investors.\n Amazon recognized the effort and rewarded each team member with Fire-TV. Hurray!!!!. You can see source code of it at => https://github.com/Awdesh/AutoAlexa.git').then(() => 'talkRandom'); 
                 }
             }
