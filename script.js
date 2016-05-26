@@ -61,6 +61,9 @@ module.exports = new Script({
 
     tellCurrentSkill: {
         prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:yes)"),
+        if(yes){
+            return bot.say('Yes is clicked');
+        }
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'YES'){
@@ -70,7 +73,7 @@ module.exports = new Script({
     },
 
     speak: {
-        prompt: (bot) => bot.say("Anytime you can type Education, Blog, Career, Skill, Contact in order to learn about Awdesh"),
+        prompt: (bot) => bot.say("Anytime you can type Education, Career, Skill, Contact in order to learn about Awdesh"),
         receive: (bot, message) => {
 
             let upperText = message.text.trim().toUpperCase();
