@@ -28,7 +28,7 @@ module.exports = new Script({
                 .then(() => 'speak');  
         }
     },
-
+    
     talkRandom: {
         prompt: (bot) => bot.say("I normally don't let go anyone untill they say 'bye'.\n For more info you can contact Awdesh at 'awdesh@outlook.com' or 3153829915"),
         receive: (bot, message) => {
@@ -96,7 +96,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say('Sorry Awdesh didn\'t teach me that, but one day...').then(() => 'tellHackathon');
+                    return bot.say('I prefer to stay quite if I don\'t understand anything..').then(() => 'tellHackathon');
                 }
 
                 var response = scriptRules[upperText];
