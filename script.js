@@ -40,7 +40,7 @@ module.exports = new Script({
     },
 
     tellHackathon: {
-        prompt: (bot) => bot.say("If you want to learn more about Awdesh just type 'more'"),
+        prompt: (bot) => bot.say("If you want to learn more about Awdesh just type %[MORE]"),
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'MORE'){
