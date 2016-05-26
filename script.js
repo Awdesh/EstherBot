@@ -40,7 +40,9 @@ module.exports = new Script({
     },
 
     tellHackathon: {
-        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:message)"),
+        prompt: (bot) => bot.say("Want to learn more about Awdesh-: %[Yes](postback:message)").then(() => if(message === 'Yes' || message === 'yes'){
+            return bot.say('clicked yessssssssss....');
+        });,
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'YES'){
