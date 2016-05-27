@@ -75,9 +75,7 @@ module.exports = new Script({
     },
 
     speak: {
-        prompt: (bot) => bot.say('Anytime you can pick any of the below options-: %[Education](postback:payload)\n
-                                                                                  %[Career](postback:payload)\n
-                                                                                  %[Skill](postback:payload)');
+        prompt: (bot) => bot.say('Anytime you can pick any of the below options-: %[Education](postback:payload)%[Career](postback:payload)%[Skill](postback:payload)');
         receive: (bot, message) => {
 
             let upperText = message.text.trim().toUpperCase();
