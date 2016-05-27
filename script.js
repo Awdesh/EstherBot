@@ -7,7 +7,7 @@ const scriptRules = require('./script.json');
 
 module.exports = new Script({
     processing: {
-        prompt: (bot) => bot.say('Allo Allo!!!'),
+        // prompt: (bot) => bot.say('Allo Allo!!!'),
         receive: () => 'processing'
     },
 
@@ -40,7 +40,7 @@ module.exports = new Script({
     },
 
     talkFact: {
-        prompt: (bot) => bot.say(''),
+        prompt: (bot) => bot.say('Random fact..'),
         receive: () => 'talkFact'
     },
 
