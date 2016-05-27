@@ -41,9 +41,7 @@ module.exports = new Script({
 
     talkFact: {
         prompt: (bot) => bot.say(''),
-        receive: (bot, message) => {
-
-        }
+        receive: () => 'talkFact'
     },
 
     tellHackathon: {
