@@ -7,7 +7,7 @@ const scriptRules = require('./script.json');
 
 module.exports = new Script({
     processing: {
-        // prompt: (bot) => bot.say('Bbye. Thanks for taking time to talk to me today...'),
+        prompt: (bot) => bot.say('Allo Allo!!!'),
         receive: () => 'processing'
     },
 
@@ -34,9 +34,16 @@ module.exports = new Script({
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === "BYE"){
-                    return bot.say("Great chatting with you. Have a good day ahead. Bye.");
+                    return bot.say("Great chatting with you. Have a good day ahead. Bye."). then(() => 'talkFact');
                 }
             }
+    },
+
+    talkFact: {
+        prompt: (bot) => bot.say(''),
+        receive: (bot, message) => {
+
+        }
     },
 
     tellHackathon: {
