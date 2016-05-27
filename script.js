@@ -44,7 +44,7 @@ module.exports = new Script({
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'YES'){
-                    return bot.say('Awdesh recently participated in AngelHack Hackathon. Successfully developed a smart ToDo App on Alexa and pitched the idea to investors\n. Amazon recognized the effort and rewarded each team member with Fire-TV. Hurray!!!!. You can see source code of it at => https://github.com/Awdesh/AutoAlexa.git').then(() => 'tellCurrent'); 
+                    return bot.say('Awdesh recently participated in AngelHack Hackathon. Successfully developed a smart ToDo App on Alexa and pitched the idea to investors.\n Amazon recognized the effort and rewarded each team member with Fire-TV. Hurray!!!!. You can see source code of it at => %[Alexa Code](https://github.com/Awdesh/AutoAlexa.git)').then(() => 'tellCurrent'); 
                 }
             }
     },
@@ -64,7 +64,7 @@ module.exports = new Script({
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === 'YES'){
-                    return bot.say('Awdesh recently participated in AngelHack Hackathon. Successfully developed a smart ToDo App on Alexa and pitched the idea to investors.\n Amazon recognized the effort and rewarded each team member with Fire-TV. Hurray!!!!. You can see source code of it at => %[Alexa Code](https://github.com/Awdesh/AutoAlexa.git)').then(() => 'talkRandom'); 
+                    return bot.say('Awdesh is always learning new skills and technology. He\'s currently honing his nodejs skill. He has keen interest in ChatBots and using different emerging platform/API to create bots.').then(() => 'talkRandom'); 
                 }
             }
     },
