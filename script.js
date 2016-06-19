@@ -34,15 +34,15 @@ module.exports = new Script({
         receive: (bot, message) => {
                 let upperText = message.text.trim().toUpperCase();
                 if(upperText === "BYE"){
-                    return bot.say("Great chatting with you. Have a good day ahead. Bye."). then(() => 'talkFact');
+                    return bot.say("Great chatting with you. Have a good day ahead. Bye.");
                 }
             }
     },
 
-    talkFact: {
-        prompt: (bot) => bot.say('Random fact..'),
-        receive: () => 'talkFact'
-    },
+    // talkFact: {
+    //     prompt: (bot) => bot.say('Random fact..'),
+    //     receive: () => 'talkFact'
+    // },
 
     tellHackathon: {
         prompt: (bot) => bot.say("Want to learn more about Awdesh just type 'yes'"),
