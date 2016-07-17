@@ -7,7 +7,6 @@ const scriptRules = require('./script.json');
 
 module.exports = new Script({
     processing: {
-        // prompt: (bot) => bot.say('Allo Allo!!!'),
         receive: () => 'processing'
     },
 
@@ -38,11 +37,6 @@ module.exports = new Script({
                 }
             }
     },
-
-    // talkFact: {
-    //     prompt: (bot) => bot.say('Random fact..'),
-    //     receive: () => 'talkFact'
-    // },
 
     tellHackathon: {
         prompt: (bot) => bot.say("Want to learn more about Awdesh just type 'yes'"),
@@ -76,7 +70,7 @@ module.exports = new Script({
 
     speak: {
         // prompt: (bot) => bot.say('Anytime you can pick any of the below options-: %[Education](postback:payload)%[Education](postback:payload)'),
-        prompt: (bot) => bot.say('Anytime you can type Education, Career, Skill, Contact'),
+        prompt: (bot) => bot.say('Anytime you can type Education, Career, Skill, Contact or Resume'),
         receive: (bot, message) => {
 
             let upperText = message.text.trim().toUpperCase();
