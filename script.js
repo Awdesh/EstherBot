@@ -96,7 +96,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say('I prefer to stay quite if I don\'t understand anything..').then(() => 'tellHackathon');
+                    return bot.say('I prefer to stay quiet if I don\'t understand anything..').then(() => 'tellHackathon');
                 }
 
                 var response = scriptRules[upperText];
