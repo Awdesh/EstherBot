@@ -70,7 +70,7 @@ module.exports = new Script({
 
     speak: {
         // prompt: (bot) => bot.say('Anytime you can pick any of the below options-: %[Education](postback:payload)%[Education](postback:payload)'),
-        prompt: (bot) => bot.say('Anytime you can type Education, Career, Skill, Contact'),
+        prompt: (bot) => bot.say('Anytime you can type Education, Career, Skill, Contact or Resume'),
         receive: (bot, message) => {
 
             let upperText = message.text.trim().toUpperCase();
@@ -96,7 +96,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say('I prefer to stay quite if I don\'t understand anything..').then(() => 'tellHackathon');
+                    return bot.say('I prefer to stay quiet if I don\'t understand anything..').then(() => 'tellHackathon');
                 }
 
                 var response = scriptRules[upperText];
